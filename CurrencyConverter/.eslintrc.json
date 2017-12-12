@@ -21,7 +21,7 @@
       0
     ],
     "react/require-default-props": [
-      0
+      1
     ],
     "global-require": [
       0

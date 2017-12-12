@@ -1,21 +1,26 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import EStyleSheet from 'react-native-extended-stylesheet'
 
-export default class App extends React.Component {
-  render() {
-    return (
-      <View style={styles.container}>
-        <Text>Open up App.js to start working on your app/index.js !!!</Text>
-      </View>
-    );
-  }
-}
+// import Home from './screens/Home'
+//import CurrencyList from './screens/CurrencyList'
+// import Options from './screens/Options'
+import Themes from './screens/Themes'
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+EStyleSheet.build({
+  $primaryBlue: '#4F6D7A',
+  $primaryOrange: '#D57A66',
+  $primaryGreen: '#00BD9D',
+  $primaryPurple: '#9E768F',
+
+  $white: '#fff',
+  $border: '#E2E2E2',
+  $inputText: '#797979',
+  $lightGray: '#F0F0F0',
+  $darkText: '#343434'
+  // $outline: 1
+})
+// export default () => <Home />
+// export default () => <CurrencyList />
+// export default () => <Options />
+export default () => <Themes />

@@ -1,44 +1,46 @@
 import React, { Component } from 'react';
-import { Text, View, Image, ImageBackground, Keyboard, Animated } from 'react-native'
+import { Text, View, Image, ImageBackground, Keyboard, Animated } from 'react-native';
 
-import styles from './styles'
+import styles from './styles';
 
 class Logo extends Component {
- 
+
   componentDidMount() {
-    this.keyboardShowListener = Keyboard.addListener('keyboardWillShow', this.keyboardShow)
-    this.keyboardHideListener = Keyboard.addListener('keyboardWillHide', this.keyboardHide)
+    this.keyboardShowListener = Keyboard.addListener('keyboardWillShow', this.keyboardShow);
+    this.keyboardHideListener = Keyboard.addListener('keyboardWillHide', this.keyboardHide);
   }
 
   componentWillUnmount() {
-   this.keyboardShowListener.remove()
-   this.keyboardHideListener.remove() 
+    this.keyboardShowListener.remove();
+    this.keyboardHideListener.remove();
   }
-  
+
   keyboardShow = () => {
-    console.log('keyboard show')
+    console.log('keyboard show');
   }
 
   keyboardHide = () => {
-    console.log('keyboard hide')
+    console.log('keyboard hide');
   }
 
   render() {
     return (
       <View style={styles.container}>
-        <ImageBackground 
+        <ImageBackground
           resizeMode="contain"
-          style={styles.containerImage} 
-          source={require('./images/background.png')}>
-          <Animated.Image 
+          style={styles.containerImage}
+          source={require('./images/background.png')}
+        >
+          <Animated.Image
             resizeMode="contain"
             style={styles.logo}
-            source={require('./images/logo.png')}/>
+            source={require('./images/logo.png')}
+          />
         </ImageBackground>
         <Text style={styles.text}>Currency Converter</Text>
       </View>
-    )
+    );
   }
 }
 
-export default Logo
+export default Logo;

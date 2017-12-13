@@ -13,7 +13,7 @@ const ICON_SIZE = 23;
 class Options extends Component {
   static propTypes = {
     navigation: PropTypes.object,
-    alertWithType : PropTypes.func,
+    alertWithType: PropTypes.func,
   }
 
   handleThemePress = () => {
